@@ -66,6 +66,16 @@ class Queue<E>{
 			current=current.next;
 		}
 	}
+	public E peek() {
+		E temp;
+		if(isEmpty())
+			return null;
+		else
+		{
+			temp=head.data;
+			return temp;
+		}
+	} 
 	
 }
 public class QueueImplementation {
