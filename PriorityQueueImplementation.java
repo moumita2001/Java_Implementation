@@ -24,7 +24,6 @@ class PriorityQueue {
 		
 		if(isEmpty()) {
 			head=newnode;
-//			tail=head;
 		}
 		else if(getLength(head.data)>len) {
 			temp=head.next;
@@ -36,11 +35,7 @@ class PriorityQueue {
 			Node1 current=head.next;
 			Node1 prev=head;
 			boolean found=false;
-//			if(getLength(head.data) >len) {
-//				newnode.next=head;
-//				head=newnode;
-//			}
-//			else {
+
 			while(current!=null) {
 				if(getLength(current.data)<len) {
 					current=current.next;
@@ -203,9 +198,6 @@ public class PriorityQueueImplementation{
 		          break;
 		          
 		          case 7:
-//		               int data = Integer.parseInt (br.readLine ());
-//		               Map <Integer, Integer> m = pq.getLocationElement (data);
-//		               System.out.println(data + " " + m.get (data));
 		        	  String data =br.readLine ();
 		        	  System.out.println(data+": "+pq.getLocation(data));
 		          break;
@@ -218,25 +210,5 @@ public class PriorityQueueImplementation{
 		          
 		     }
 		}
-//		for(int i=0;i<5;i++) {
-//			pq.add(br.readLine());
-//		}
-//		pq.display();
-//		System.out.println("....."+pq.poll());
-//		pq.display();
-	}
-}	
-	
-//public class PriorityQueueImplementation{
-//	public static void main(String[] args)throws IOException{
-//		BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
-//		PriorityQueue st=new PriorityQueue();
-////		char ch='y';
-//		
-////			System.out.println("Do you want to enter more");
-////			ch=(char)br.read();
-//		}
-//		st.display();
-//	}
-//}
+
 
