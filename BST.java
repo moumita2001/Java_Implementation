@@ -1,6 +1,4 @@
-package practice;
 
-//import java.util.Stack;
 
 class Node2{
 	int data;
@@ -12,7 +10,7 @@ class Node2{
 	}
 }
 class BinarySearchTree{
-//	Stack<Node2> st=new Stack<>();
+
 	Node2 root=null;
 	public void insert(int data) {
 		root=insertion(root,data);
@@ -80,34 +78,9 @@ class BinarySearchTree{
 			
 			inorder(root.left);
 			System.out.print(" "+root.data);
-//			st.push(root);
 			inorder(root.right);
 		}
-	public void delete(int value) {
-		root=deleteKey(root,value);
-		
-	}
-	public Node2 deleteKey(Node2 root,int value) {
-		if(root==null) {
-			return root;
-		}
-		if(value>root.data) {
-			root.right=deleteKey(root.right,value);
-		}
-		else if(value<root.data) {
-			root.left=deleteKey(root.left,value);
-		}
-		else {
-			if(root.left==null && root.right==null) {
-				return root;
-			}
-		else if(root.left==null)
-				return root.right;
-			else if(root.right==null)
-				return root.left;
-		}
-		return root;
-	}
+	
 	public int height() {
 		int h=heightTree(root);
 		return h;
@@ -118,11 +91,7 @@ class BinarySearchTree{
 		}
 		return 1+Math.max(heightTree(root.left), heightTree(root.right));
 	}
-//	Stack<Node2> printInorder() {
-//		System.out.print(st.peek());
-//		return st;
-//	}
-	
+//	
 	
 }
 public class BST {
@@ -141,12 +110,8 @@ public class BST {
 	        System.out.println();
 	        System.out.println("PostOrder Tranversal");
 	        tree.displayPostOrder();
-	       // tree.delete(40);
-//	        System.out.println("PreOrder Tranversal");
-//	        tree.displayPreOrder();
 	        System.out.println();
 	        System.out.println(tree.height());
-//	        System.out.println(tree.printInorder());
 	}
 
 }
